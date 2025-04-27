@@ -1,0 +1,220 @@
+@font-face {
+  font-family:cairo ;
+  src: url(./../fonts/Cairo-Regular.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: cairo;
+  color: black;
+}
+/**
+* Header
+**/
+header{
+    border:2px q red; 
+
+      padding: 50px 15px 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("./../images/header_bg.jpg");  
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top:0;
+  padding: 4px 0;
+
+  display: grid;
+  grid-template-columns:15% 60% 10% 15% ; 
+  align-items: center;
+  justify-items: center;
+ 
+
+} 
+/**/
+.mobile-menu{
+  display: none;
+}
+
+/* SignIn Button*/
+header button{
+  background-color: transparent;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  border:1px solid #fff ;
+  box-shadow: none;
+}
+header .phone p a{
+  text-decoration: none;
+  color: #fff ;
+}
+header button:hover{
+  background-color: #fff;
+  color: #000;
+  
+}
+/* DropDwon */
+.drop-dwon-container{
+  position: relative;
+}
+.drop-dwon-items{
+  display: none;
+  position: absolute;
+}
+.drop-dwon-items li{
+  background-color: black;
+  width: 133px;
+  margin: 0;
+  border-bottom:1px solid #fff ;
+}
+.drop-dwon-items li a{
+  display: block;
+  padding: 8px;
+}
+.drop-dwon-container:hover .drop-dwon-items{
+  display: block;
+}
+/*logo posetion */
+
+   #logo{
+        position: relative;
+   }
+   #logo img{
+    width: 100%;
+   }
+
+/* Menu */
+header nav ul{
+list-style: none;
+
+} 
+header nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: fantasy;
+  letter-spacing: 2.5px;
+}
+header nav ul li a:hover{
+  color: red;
+}
+/*
+*End Header 
+*/
+
+.content{
+    margin-top: 70px;  
+    padding:0 15px ;
+}
+.about{
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  background-color: rgb(216, 221, 221);
+}
+.about-img img{
+  width: 100%;
+}
+
+
+
+.products{
+  background-color: #222;
+  display: grid;
+  grid-template-columns:auto  auto auto;
+  gap: 20px;
+}
+.products .product{
+    border: 1px solid #fff;
+}
+.products .product img{
+  width:80%;
+  opacity:0.5;
+  transition: all 2s;
+}
+.products .product img:hover{
+  opacity: 1;
+}
+.product{
+  position: relative;
+}
+.product p{
+  position: absolute;
+  top:30%;
+  left:30%;
+  color: #fff;
+}
+
+.products .product1{
+grid-column-start:1 ;
+grid-column-end:3 ;
+}
+.products .product2{
+  grid-row-start:2 ;
+  grid-row-end:4 ;
+  }
+  .products .product2 img{
+    margin-top: 50%;
+  }
+  .products .product2 p{
+    top: 50%;
+  }
+  footer{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: 13px;
+    background-color: #00000094;
+    margin-top: 16px;
+  }
+  .footer1 {
+    display: block;
+  }
+  .footer1,.footer2,.footer3{
+    border-right:1px solid #fff;
+  }
+
+  @media only screen and (max-width: 767px ) {
+    header{
+      grid-template-columns: 50% 50%;
+    }
+    header button{
+      padding: 5px 17px;
+    }
+     .about,.products{
+      grid-template-columns:auto;
+     } 
+    header .main-menu{
+      display: none;
+    }
+    header .mobile-menu{
+      display: block;
+    }
+     .products .product1{
+      grid-column-start:1 ;
+      grid-column-end:2 ;
+      }
+      .products .product2{
+        grid-row-start:2 ;
+        grid-row-end:3 ;
+        }
+        .products .product2 img{
+          margin-top: 0;
+        }
+        footer{
+          flex-direction: column;
+          padding: 0;
+        }
+        .footer1,.footer2,.footer3{
+          border-bottom:1px solid #fff;
+          padding: 5px;
+        }
+  }
